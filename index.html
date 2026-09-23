@@ -41,7 +41,6 @@
       margin: 0 auto;
     }
 
-    /* Top Executive Bar */
     .top-bar {
       display: flex;
       justify-content: space-between;
@@ -66,7 +65,6 @@
       background: var(--success);
     }
 
-    /* Header Profile */
     header {
       padding: 3.5rem 0 2.5rem 0;
       border-bottom: 1px solid var(--border);
@@ -117,7 +115,6 @@
       color: #fff;
     }
 
-    /* Core Metrics Dashboard */
     .telemetry-strip {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -149,7 +146,6 @@
       letter-spacing: 0.04em;
     }
 
-    /* Section Styling */
     section { margin-top: 3.5rem; }
     .section-head {
       margin-bottom: 1.75rem;
@@ -170,7 +166,6 @@
       color: var(--text-muted);
     }
 
-    /* Architectural System Cards */
     .system-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -206,7 +201,6 @@
       color: var(--text-secondary);
     }
 
-    /* Problem / Architecture / Outcome Grid */
     .details-table {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -267,7 +261,6 @@
       margin-top: 1rem;
     }
 
-    /* Inventory Table */
     .inventory-table {
       width: 100%;
       border-collapse: collapse;
@@ -301,8 +294,8 @@
       border-radius: 4px;
     }
     .badge-public { background: var(--success-soft); color: var(--success); }
-    .badge-private { background: rgba(245, 158, 11, 0.1); color: var(--warning); }
-    .badge-local { background: rgba(148, 163, 184, 0.1); color: var(--text-muted); }
+    .repo-link { color: var(--accent); text-decoration: none; font-family: var(--mono); }
+    .repo-link:hover { text-decoration: underline; }
 
     footer {
       margin-top: 5rem;
@@ -352,7 +345,6 @@
       </div>
     </header>
 
-    <!-- Operational Telemetry -->
     <div class="telemetry-strip">
       <div class="telemetry-cell">
         <div class="cell-value">357</div>
@@ -372,14 +364,12 @@
       </div>
     </div>
 
-    <!-- Core Systems Section -->
     <section>
       <div class="section-head">
         <h2>Production Architectures & Case Studies</h2>
-        <span class="section-note">Grounded in local verified codebases</span>
+        <span class="section-note">Grounded in public open-source repositories</span>
       </div>
 
-      <!-- System 1 -->
       <div class="system-card">
         <div class="card-top">
           <div class="card-title">1. Cost-Gated Knowledge Engine & Zero-Dependency MCP Server</div>
@@ -402,8 +392,8 @@
         </div>
         <ul class="bullet-list">
           <li><strong>Deterministic Evaluation Harness (<code>wiki_health_check.py</code>):</strong> Avoids subjective LLM evaluations. Parses wikilink references and frontmatter mechanically via regex to enforce strict structural invariants.</li>
-          <li><strong>Zero-Dependency MCP Server (<code>brain_mcp_server.py</code>):</strong> Implemented standard JSON-RPC 2.0 over stdio without third-party frameworks, exposing 6 native tools (<code>brain_search</code>, <code>brain_page</code>, <code>brain_status</code>, <code>brain_log</code>, <code>brain_profile</code>, <code>brain_backlog_add</code>).</li>
-          <li><strong>Automated Fault Recovery:</strong> Pre-flight file snapshots and a 2-strikes circuit breaker; verified in production by catching a real OS permission exception and automatically reverting changes without data loss.</li>
+          <li><strong>Zero-Dependency MCP Server (<code>brain_mcp_server.py</code>):</strong> Implemented standard JSON-RPC 2.0 over stdio without third-party frameworks, exposing 6 native tools.</li>
+          <li><strong>Automated Fault Recovery:</strong> Pre-flight file snapshots and a 2-strikes circuit breaker; verified in production by catching a real OS permission exception and automatically reverting changes.</li>
         </ul>
         <div class="code-block">
 # Deterministic Eval Harness Excerpt (Zero Tokens Consumed)
@@ -417,7 +407,6 @@ def main():
         </div>
       </div>
 
-      <!-- System 2 -->
       <div class="system-card">
         <div class="card-top">
           <div class="card-title">2. 24/7 Autonomous LinkedIn Scheduling Daemon & Lead Pipeline</div>
@@ -445,7 +434,6 @@ def main():
         </ul>
       </div>
 
-      <!-- System 3 -->
       <div class="system-card">
         <div class="card-top">
           <div class="card-title">3. Full-Stack Headless Apparel Storefront (Next.js 14)</div>
@@ -472,7 +460,6 @@ def main():
         </ul>
       </div>
 
-      <!-- System 4 -->
       <div class="system-card">
         <div class="card-top">
           <div class="card-title">4. High-Throughput Dubai Hospitality Revenue ETL & Distribution</div>
@@ -500,90 +487,59 @@ def main():
       </div>
     </section>
 
-    <!-- Codebases & Repository Status Audit -->
     <section>
       <div class="section-head">
-        <h2>System Codebase & Repository Visibility Audit</h2>
-        <span class="section-note">GitHub Profile: github.com/satbeers0712-ai</span>
+        <h2>Public GitHub Repositories & Open Source Systems</h2>
+        <span class="section-note">Verified live on github.com/satbeers0712-ai</span>
       </div>
-      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
-        Complete breakdown of codebases on local machine vs. current GitHub visibility:
-      </p>
 
       <table class="inventory-table">
         <thead>
           <tr>
-            <th>Project / System</th>
+            <th>Public Repository</th>
             <th>Type</th>
-            <th>Local Path</th>
-            <th>GitHub Remote & Visibility</th>
-            <th>Reflected in CV?</th>
+            <th>Direct GitHub Link</th>
+            <th>Visibility</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>LinkedIn Automation</strong></td>
-            <td>Background Daemon</td>
-            <td><code>~/Projects/Automation/linkedin_automation</code></td>
-            <td><span class="repo-badge badge-private">Private Repo</span> <code>satbeers0712-ai/linkedin_automation</code></td>
-            <td>Yes (Primary)</td>
-          </tr>
-          <tr>
-            <td><strong>Second Brain & MCP</strong></td>
-            <td>Knowledge Engine</td>
-            <td><code>~/second-brain</code></td>
-            <td><span class="repo-badge badge-local">Local Only</span> (No GitHub remote set)</td>
-            <td>Yes (Primary)</td>
+            <td><strong>Live Hosted Portfolio</strong></td>
+            <td>GitHub Pages Web App</td>
+            <td><a class="repo-link" href="https://github.com/satbeers0712-ai/satbeers0712-ai.github.io" target="_blank">satbeers0712-ai.github.io</a></td>
+            <td><span class="repo-badge badge-public">Public</span></td>
           </tr>
           <tr>
             <td><strong>SOL Apparel Storefront</strong></td>
-            <td>Next.js 14 App</td>
-            <td><code>~/Scratchpad/sol-website</code></td>
-            <td><span class="repo-badge badge-local">Local Only</span> (No GitHub remote set)</td>
-            <td>Yes (Primary)</td>
+            <td>Next.js 14 / TypeScript</td>
+            <td><a class="repo-link" href="https://github.com/satbeers0712-ai/sol-apparel-storefront" target="_blank">sol-apparel-storefront</a></td>
+            <td><span class="repo-badge badge-public">Public</span></td>
           </tr>
           <tr>
-            <td><strong>Meta Automation</strong></td>
-            <td>Content Pipeline</td>
-            <td><code>~/Projects/Automation/meta_automation</code></td>
-            <td><span class="repo-badge badge-private">Private Repo</span> (Ahead by 2 commits)</td>
-            <td>Yes (Supporting)</td>
+            <td><strong>MCP Knowledge Engine & Evals</strong></td>
+            <td>Python MCP stdio Server</td>
+            <td><a class="repo-link" href="https://github.com/satbeers0712-ai/mcp-knowledge-engine" target="_blank">mcp-knowledge-engine</a></td>
+            <td><span class="repo-badge badge-public">Public</span></td>
           </tr>
           <tr>
-            <td><strong>Nifty Options System</strong></td>
-            <td>Quantitative Engine</td>
-            <td><code>~/Projects/Trading/nifty_options_system</code></td>
-            <td><span class="repo-badge badge-private">Private Repo</span> <code>satbeers0712-ai/nifty_options_system</code></td>
-            <td>Yes (Supporting)</td>
+            <td><strong>LinkedIn Automation Daemon</strong></td>
+            <td>24/7 Daemon & Playwright</td>
+            <td><a class="repo-link" href="https://github.com/satbeers0712-ai/linkedin-automation-daemon" target="_blank">linkedin-automation-daemon</a></td>
+            <td><span class="repo-badge badge-public">Public</span></td>
           </tr>
           <tr>
             <td><strong>Client Intake Portal</strong></td>
-            <td>Full-Stack Portal</td>
-            <td><code>~/Projects/Web-Apps/intake_form</code></td>
-            <td><span class="repo-badge badge-public">Public Repo</span> <code>satbeers0712-ai/navv-intake</code></td>
-            <td>Yes (Supporting)</td>
-          </tr>
-          <tr>
-            <td><strong>Carousel Agents</strong></td>
-            <td>Multi-Agent Pipeline</td>
-            <td><code>~/Scratchpad/carousel_agents</code></td>
-            <td><span class="repo-badge badge-local">Local Only</span></td>
-            <td>Yes (Supporting)</td>
-          </tr>
-          <tr>
-            <td><strong>Job Applications System</strong></td>
-            <td>Pipeline & Scripts</td>
-            <td><code>~/Documents/Career/job_applications</code></td>
-            <td><span class="repo-badge badge-private">Private Repo</span> <code>satbeers0712-ai/job_applications</code></td>
-            <td>Internal Ops</td>
+            <td>Full-Stack Web App</td>
+            <td><a class="repo-link" href="https://github.com/satbeers0712-ai/navv-intake" target="_blank">navv-intake</a></td>
+            <td><span class="repo-badge badge-public">Public</span></td>
           </tr>
         </tbody>
       </table>
     </section>
 
     <footer>
-      <div>Satbeer Singh Virdi — Engineering Systems Portfolio</div>
-      <div>Verified from local environment · 2026</div>
+      <div>Satbeer Singh Virdi — Systems & Automation Engineering</div>
+      <div>Hosted on GitHub Pages · satbeers0712-ai.github.io</div>
     </footer>
   </div>
 </body>
