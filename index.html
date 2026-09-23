@@ -485,6 +485,59 @@ def main():
           <li><strong>Multi-Channel Synchronization:</strong> Automated bi-directional calendar and rate updates across Airbnb, Booking.com, Expedia, and Agoda.</li>
         </ul>
       </div>
+      <div class="system-card">
+        <div class="card-top">
+          <div class="card-title">5. Quantitative Options Simulation & Testing Harness (quant-paper-lab)</div>
+          <div class="card-stack">
+            <span class="tag">Python 3.11+</span>
+            <span class="tag">Pytest (38 Suites)</span>
+            <span class="tag">Risk Budgeting</span>
+            <span class="tag">Zero-Order Invariant</span>
+          </div>
+        </div>
+        <div class="details-table">
+          <div class="detail-box box-problem">
+            <div class="box-label">The Operational Problem</div>
+            <p>Backtesting algorithmic option strategies in unconstrained environments leads to catastrophic drawdown, execution slippage, and code untested against live exchange anomalies.</p>
+          </div>
+          <div class="detail-box box-outcome">
+            <div class="box-label">Measurable Outcome</div>
+            <p>38/38 unit tests executing in &lt;2.0s; enforces mathematical parity between backtest trailing stops and live ticks with strict 2-loss circuit breakers and half-Kelly sizing caps.</p>
+          </div>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Zero Order Placement Invariant (<code>test_no_order_placement.py</code>):</strong> Formally tests and verifies that simulation scripts contain zero network calls to broker order execution endpoints.</li>
+          <li><strong>Offline Replay Autonomy (<code>test_no_live_dependency.py</code>):</strong> Complete strategy, VWAP z-score drift, and volatility models run locally against offline tick fixtures.</li>
+          <li><strong>Centralized Risk Governance (<code>config/settings.yaml</code>):</strong> Single source of truth specifying hard daily loss limits, ATR trail multipliers, and market blackout windows.</li>
+        </ul>
+      </div>
+
+      <div class="system-card">
+        <div class="card-top">
+          <div class="card-title">6. Programmatic Slide Deck & Document Generation Engine (carousel-agents-pipeline)</div>
+          <div class="card-stack">
+            <span class="tag">Python Pillow</span>
+            <span class="tag">Typographic Math</span>
+            <span class="tag">ReportLab PDF</span>
+            <span class="tag">Deterministic Layout</span>
+          </div>
+        </div>
+        <div class="details-table">
+          <div class="detail-box box-problem">
+            <div class="box-label">The Operational Problem</div>
+            <p>Creating branded social carousels and technical visual slides manually in Figma or Canva consumes 30+ minutes per post and introduces layout inconsistencies.</p>
+          </div>
+          <div class="detail-box box-outcome">
+            <div class="box-label">Measurable Outcome</div>
+            <p>Renders complete 10-slide decks and compiles LinkedIn-compliant multi-page PDFs in &lt;400ms locally at $0 compute cost with mathematical text-wrapping and zero overlap.</p>
+          </div>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Spatial Bounding-Box Math (<code>core/layout.py</code>):</strong> Calculates exact character dimensions and wraps text deterministically to prevent text clipping across variable card grids.</li>
+          <li><strong>Automated PDF Bundling (<code>core/pdf_compiler.py</code>):</strong> Packages anti-aliased 1080x1080 raster frames into vector-wrapped multi-page PDFs matching document post specs.</li>
+          <li><strong>Zero Design SaaS Dependency:</strong> Replaces browser screenshot engines (Puppeteer) and paid design tools with lightweight, pure Python graphics primitives.</li>
+        </ul>
+      </div>
     </section>
 
     <section>
@@ -510,21 +563,33 @@ def main():
             <td><span class="repo-badge badge-public">Public</span></td>
           </tr>
           <tr>
-            <td><strong>SOL Apparel Storefront</strong></td>
-            <td>Next.js 14 / TypeScript</td>
-            <td><a class="repo-link" href="https://github.com/satbeers0712-ai/sol-apparel-storefront" target="_blank">sol-apparel-storefront</a></td>
+            <td><strong>Quant Simulation &amp; Test Lab</strong></td>
+            <td>Python / Pytest / Risk Engine</td>
+            <td><a class="repo-link" href="https://github.com/satbeers0712-ai/quant-paper-lab" target="_blank">quant-paper-lab</a></td>
             <td><span class="repo-badge badge-public">Public</span></td>
           </tr>
           <tr>
-            <td><strong>MCP Knowledge Engine & Evals</strong></td>
+            <td><strong>Carousel Agents Pipeline</strong></td>
+            <td>Pillow / Layout Engine / PDF</td>
+            <td><a class="repo-link" href="https://github.com/satbeers0712-ai/carousel-agents-pipeline" target="_blank">carousel-agents-pipeline</a></td>
+            <td><span class="repo-badge badge-public">Public</span></td>
+          </tr>
+          <tr>
+            <td><strong>MCP Knowledge Engine &amp; Evals</strong></td>
             <td>Python MCP stdio Server</td>
             <td><a class="repo-link" href="https://github.com/satbeers0712-ai/mcp-knowledge-engine" target="_blank">mcp-knowledge-engine</a></td>
             <td><span class="repo-badge badge-public">Public</span></td>
           </tr>
           <tr>
             <td><strong>LinkedIn Automation Daemon</strong></td>
-            <td>24/7 Daemon & Playwright</td>
+            <td>24/7 Daemon &amp; Playwright</td>
             <td><a class="repo-link" href="https://github.com/satbeers0712-ai/linkedin-automation-daemon" target="_blank">linkedin-automation-daemon</a></td>
+            <td><span class="repo-badge badge-public">Public</span></td>
+          </tr>
+          <tr>
+            <td><strong>SOL Apparel Storefront</strong></td>
+            <td>Next.js 14 / TypeScript</td>
+            <td><a class="repo-link" href="https://github.com/satbeers0712-ai/sol-apparel-storefront" target="_blank">sol-apparel-storefront</a></td>
             <td><span class="repo-badge badge-public">Public</span></td>
           </tr>
           <tr>
