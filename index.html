@@ -452,6 +452,81 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 10mm 10mm;
+      }
+      body {
+        background-color: #08090D !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .top-bar, .jump-nav {
+        display: none !important;
+      }
+      .container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+      }
+      header {
+        margin-bottom: 1.25rem !important;
+      }
+      .title-area h1 {
+        font-size: 2.2rem !important;
+      }
+      .recruiter-snapshot {
+        margin-bottom: 1rem !important;
+        padding: 1rem 1.25rem !important;
+      }
+      .telemetry-strip {
+        margin-bottom: 1.5rem !important;
+      }
+      .section-head {
+        break-after: avoid !important;
+        page-break-after: avoid !important;
+        margin-top: 1.5rem !important;
+        margin-bottom: 1rem !important;
+      }
+      .system-card {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        margin-bottom: 1.5rem !important;
+        padding: 1.5rem !important;
+      }
+      .inventory-table, .cta-card {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+      .inventory-table th, .inventory-table td {
+        padding: 0.5rem 0.6rem !important;
+        font-size: 0.8rem !important;
+      }
+      .cta-card {
+        margin-top: 1rem !important;
+        padding: 1rem !important;
+      }
+      .cta-card h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.4rem !important;
+      }
+      .cta-card p {
+        font-size: 0.85rem !important;
+        margin-bottom: 1rem !important;
+      }
+      .cta-btn {
+        padding: 0.5rem 1.25rem !important;
+        font-size: 0.82rem !important;
+      }
+      footer {
+        margin-top: 0.75rem !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+      }
+    }
   </style>
 </head>
 <body>
