@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Satbeer Singh Virdi — Senior AI Systems Engineer</title>
+  <title>Satbeer Singh Virdi — AI Systems Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -469,7 +469,7 @@
         <h1>Satbeer Singh Virdi</h1>
         <div class="role">AI Systems Engineer</div>
         <p class="summary">
-          3+ years of production experience (2023–Present) engineering deterministic data pipelines, browser automation daemons, quantitative testing labs, and token-frugal AI systems. I treat language models as narrow text-processing units wrapped inside mechanical Python evaluation harnesses—ensuring 90% of business logic runs deterministically with zero idle token spend.
+          3+ years of experience (2023–Present) building data pipelines, browser automation daemons, and reliable AI integrations. I design systems where data validation, file indexing, and business logic execute in Python, reserving language models specifically for structured text transformation.
         </p>
       </div>
 
@@ -492,8 +492,8 @@
     <!-- Recruiter & Hiring Snapshot -->
     <div class="recruiter-snapshot">
       <div class="snapshot-col">
-        <h4>Target Roles &amp; Seniority</h4>
-        <p>Senior AI Systems Engineer • Systems &amp; Automation Architect • AI Infrastructure</p>
+        <h4>Target Roles</h4>
+        <p>AI Systems Engineer • Systems &amp; Automation Developer • Python Backend</p>
       </div>
       <div class="snapshot-col">
         <h4>Availability &amp; Location</h4>
@@ -501,7 +501,7 @@
       </div>
       <div class="snapshot-col">
         <h4>Core Production Stack</h4>
-        <p>Python 3.11+, Model Context Protocol (MCP), Playwright, Pytest, Next.js 14, Local Evals</p>
+        <p>Python 3.11+, Model Context Protocol (MCP), Playwright, Pytest, Next.js 14, SQLite</p>
       </div>
     </div>
 
@@ -512,12 +512,12 @@
         <div class="cell-label">Graph Nodes (0 Broken Links)</div>
       </div>
       <div class="telemetry-cell">
-        <div class="cell-value">$0</div>
-        <div class="cell-label">Token Cost When Idle</div>
+        <div class="cell-value">21 Slots</div>
+        <div class="cell-label">Daily Scheduled Automation</div>
       </div>
       <div class="telemetry-cell">
         <div class="cell-value">38 Suites</div>
-        <div class="cell-label">Quant Pytest Invariants (&lt;2s)</div>
+        <div class="cell-label">Pytest Passing in &lt;2s</div>
       </div>
       <div class="telemetry-cell">
         <div class="cell-value">CLS = 0</div>
@@ -555,7 +555,7 @@
           </div>
           <div class="detail-box box-outcome">
             <div class="box-label">Measurable Outcome</div>
-            <p>Maintains 357 linked markdown entities with 0 broken links and 0 orphaned nodes. Evaluation runs mechanically via pure Python regex in under 200ms at $0 API cost.</p>
+            <p>Maintains 357 linked markdown entities with 0 broken links and 0 orphaned nodes. Graph validation and linting run locally in Python via regex in under 200ms without calling external APIs.</p>
           </div>
         </div>
 
@@ -570,7 +570,7 @@
                        │                                                             │
         • 357 Markdown Entities Checked                                  • 2-Strikes Circuit Breaker
         • 0 Orphan Nodes / 0 Broken Links                                • Automatic Rollback on Error
-        • Execution Time: < 200ms ($0 API Cost)                          • Persistence to Local Markdown
+        • Execution Time: < 200ms (Local Python)                         • Persistence to Local Markdown
         </div>
 
         <ul class="bullet-list">
@@ -644,48 +644,48 @@
       <!-- Case Study 3 -->
       <div class="system-card">
         <div class="card-top">
-          <div class="card-title">3. Quantitative Options Simulation &amp; Testing Harness (quant-paper-lab)</div>
+          <div class="card-title">3. Market Data Ingestion &amp; Backtest Testing Harness (quant-paper-lab)</div>
           <div class="card-stack">
             <span class="tag">Python 3.11+</span>
             <span class="tag">Pytest (38 Suites)</span>
-            <span class="tag">Risk Budgeting</span>
-            <span class="tag">Zero-Order Invariant</span>
+            <span class="tag">Broker API</span>
+            <span class="tag">Offline Fixtures</span>
           </div>
         </div>
         <div class="details-table">
           <div class="detail-box box-problem">
             <div class="box-label">The Operational Problem</div>
-            <p>Backtesting algorithmic option strategies in unconstrained environments leads to catastrophic drawdown, execution slippage, and code untested against live exchange anomalies.</p>
+            <p>Testing market data ingestion and trade exit policies directly against live broker APIs without offline test suites causes execution errors, rate limiting, and unverified edge-case behavior.</p>
           </div>
           <div class="detail-box box-outcome">
             <div class="box-label">Measurable Outcome</div>
-            <p>38/38 unit tests executing in &lt;2.0s; enforces mathematical parity between backtest trailing stops and live ticks with strict 2-loss circuit breakers and half-Kelly sizing caps.</p>
+            <p>38 unit tests executing in &lt;2.0s; validates candle aggregation, option chain calculations, and trailing stop-loss rules against offline fixtures with zero live network calls.</p>
           </div>
         </div>
 
         <div class="arch-label">System Boundary &amp; Control Flow</div>
         <div class="arch-flow">
-[Market Ingestion Layer] ──► [Signal & Strategy] ──► [Risk Governance Engine]
-(Candle Feeds • VIX Regimes) (VWAP Z-Score • Graded)  (config/settings.yaml)
-                                                             │
-                       ┌─────────────────────────────────────┴─────────────────────────────────────┐
-                       ▼                                                                           ▼
-           [test_no_order_placement.py]                                              [Shadow Execution Log]
-       (Formal Zero-Order Assertion)                                            (Simulated Slippage & Latency)
-                       │                                                                           │
-        • Zero Live Capital Requests                                              • ₹3,000 Daily Loss Limit
-        • 38 Passing Tests in 1.97s                                               • 2-Loss Consecutive Breaker
-        • Deterministic Fixture Replay                                            • Fractional Half-Kelly Sizing
+[Broker API Ingestion] ──► [Data Normalization] ──► [Exit Policy Logic]
+(Candles &amp; Option Chains)  (OHLCV • Strike PCR)     (Trailing Stop Calculations)
+                                                          │
+                       ┌──────────────────────────────────┴──────────────────────────────────┐
+                       ▼                                                                     ▼
+           [test_no_order_placement.py]                                          [Offline Test Fixtures]
+        (Verifies Zero Order API Calls)                                           (38 Tests in &lt;2.0s)
+                       │                                                                     │
+        • Zero Live Order Endpoints                                           • Offline Test Fixtures
+        • 38 Passing Tests in 1.97s                                           • Trailing Stop-Loss Checks
+        • Deterministic Fixture Replay                                        • Automated Test Coverage
         </div>
 
         <ul class="bullet-list">
-          <li><strong>Zero Order Placement Invariant (<code>test_no_order_placement.py</code>):</strong> Formally tests and verifies that simulation scripts contain zero network calls to broker order execution endpoints.</li>
-          <li><strong>Offline Replay Autonomy (<code>test_no_live_dependency.py</code>):</strong> Complete strategy, VWAP z-score drift, and volatility models run locally against offline tick fixtures.</li>
-          <li><strong>Centralized Risk Governance (<code>config/settings.yaml</code>):</strong> Single source of truth specifying hard daily loss limits, ATR trail multipliers, and market blackout windows.</li>
+          <li><strong>Zero Order Placement Safety (<code>test_no_order_placement.py</code>):</strong> Asserts that market data processing and backtest runners contain zero calls to broker order execution endpoints.</li>
+          <li><strong>Offline Replay Verification (<code>test_no_live_dependency.py</code>):</strong> Validates data parsing and trailing stop calculations locally against saved market fixtures without network dependencies.</li>
+          <li><strong>Centralized Settings (<code>config/settings.yaml</code>):</strong> Configures stop-loss rules, candle intervals, and data polling intervals in a single configuration file.</li>
         </ul>
 
         <div class="adr-box">
-          <strong>Architectural Decision Record (ADR):</strong> Isolated simulation components strictly behind fixture replay interfaces. Decoupling historical tick processing from live broker websockets allowed 38 integration suites to execute in under 2 seconds during CI/CD.
+          <strong>Architectural Decision Record (ADR):</strong> Decoupled market data ingestion and rule calculations from live broker websockets. Running against offline fixtures allows all 38 test suites to execute deterministically in under 2 seconds during development and CI.
         </div>
 
         <div class="repro-bar">
@@ -712,7 +712,7 @@
           </div>
           <div class="detail-box box-outcome">
             <div class="box-label">Measurable Outcome</div>
-            <p>Renders complete 10-slide decks and compiles LinkedIn-compliant multi-page PDFs in &lt;400ms locally at $0 compute cost with mathematical text-wrapping and zero overlap.</p>
+            <p>Renders complete 10-slide decks and compiles LinkedIn-compliant multi-page PDFs in &lt;400ms locally in Python without external design tools or subscriptions.</p>
           </div>
         </div>
 
@@ -823,7 +823,7 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong>Quant Simulation &amp; Test Lab</strong></td>
+            <td><strong>Market Data &amp; Backtest Test Lab</strong></td>
             <td>Python 3.11, Pytest, Pandas</td>
             <td><a class="repo-link" href="https://github.com/satbeervirdi/quant-paper-lab" target="_blank">quant-paper-lab →</a></td>
             <td>38-suite offline regression harness (&lt;2.0s)</td>
@@ -874,7 +874,7 @@
     </section>
 
     <footer>
-      <div>Satbeer Singh Virdi — Senior AI Systems Engineer</div>
+      <div>Satbeer Singh Virdi — AI Systems Engineer</div>
       <div>Hosted on GitHub Pages · satbeervirdi.github.io</div>
     </footer>
   </div>
